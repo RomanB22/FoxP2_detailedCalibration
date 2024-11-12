@@ -125,10 +125,9 @@
     {
         "param_name": "gIhbar_Ih",
         "mech": "Ih",
-        "dist": "(-0.8696 + 2.087*math.exp(({distance})*0.0031))*{value}",
-        "dist_type": "exp",
+        "dist_type": "uniform",
         "mech_param": "gIhbar",
-        "value": 8e-05,
+        "bounds": [0, 1e-04],
         "type": "range",
         "sectionlist": "apical"
     },
@@ -341,7 +340,7 @@
         "mech": "Ih",
         "dist_type": "uniform",
         "mech_param": "gIhbar",
-        "value": 8e-05,
+        "bounds": [0, 1e-04],
         "type": "range",
         "sectionlist": "somatic"
     }
