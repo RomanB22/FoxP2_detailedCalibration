@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=100
-maxGenerations=100
+offspringSize=2
+maxGenerations=10
 
 morphoFile = './morphology/threeCompartmental.swc'
 workDir = './config_3Comp/'
@@ -97,9 +97,14 @@ def plot_responses(responses, filename='./figures/responses.png'):
     fig.savefig(filename)
 if plotResponses: plot_responses(release_responses, filename='./figures/Original_responses.png')
 
-opt = bpopt.optimisations.DEAPOptimisation(
+# opt = bpopt.optimisations.DEAPOptimisation(
+#     evaluator=evaluator,
+#     offspring_size=offspringSize)
+
+opt = bpopt.deapext.optimisationsCMA.DEAPOptimisationCMA(
     evaluator=evaluator,
-    offspring_size=offspringSize)
+    offspring_size=offspringSize,
+    selector_name="multi_objective") #single_objective multi_objective
 
 final_pop, halloffame, log, hist = opt.run(max_ngen=maxGenerations, cp_filename='checkpoints/checkpoint.pkl')
 
