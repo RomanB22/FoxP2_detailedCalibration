@@ -65,6 +65,11 @@ evaluator = ephys.evaluators.CellEvaluator(
         sim=sim)
 
 release_params = {
+    'gIhbar_Ih.apical': 0,
+    'gIhbar_Ih.somatic': 0,
+    'g_pas.all': 7.5e-05,
+    'e_pas.all': -80,
+    'cm.all': 1,
     'gNaTs2_tbar_NaTs2_t.apical': 0.026145,
     'gSKv3_1bar_SKv3_1.apical': 0.004226,
     'gImbar_Im.apical': 0.000143,
