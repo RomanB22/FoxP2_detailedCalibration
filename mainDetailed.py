@@ -91,7 +91,6 @@ release_params = {
     'decay_CaDynamics_E2.somatic': 210.485284,
     'gCa_LVAstbar_Ca_LVAst.somatic': 0.000333
 }
-release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
 
 def plot_responses(responses, filename='./figures/responses.png'):
     fig, axes = plt.subplots(len(responses), figsize=(10,8))
@@ -100,7 +99,9 @@ def plot_responses(responses, filename='./figures/responses.png'):
         axes[index].set_title(resp_name)
     fig.tight_layout()
     fig.savefig(filename)
-if plotResponses: plot_responses(release_responses, filename='./figures/Original_responses.png')
+if plotResponses: 
+    release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
+    plot_responses(release_responses, filename='./figures/Original_responses.png')
 
 # opt = bpopt.optimisations.DEAPOptimisation(
 #     evaluator=evaluator,
