@@ -2,23 +2,23 @@
     {
         "param_name": "g_pas",
         "sectionlist": "all",
-        "type": "section",
+        "type": "range",
         "dist_type": "uniform",
-        "value": 7.5e-05
+        "bounds": [5e-05, 8e-05]
     },
     {
         "param_name": "e_pas",
         "sectionlist": "all",
-        "type": "section",
+        "type": "range",
         "dist_type": "uniform",
-        "value": -80
+        "bounds": [-100, -60]
     },
     {
         "param_name": "cm",
         "sectionlist": "all",
-        "type": "section",
+        "type": "range",
         "dist_type": "uniform",
-        "value": 1
+        "bounds": [0.8, 1.2]
     },
     {
         "param_name": "Ra",
