@@ -114,9 +114,9 @@ opt = bpopt.deapext.optimisationsCMA.DEAPOptimisationCMA(
 
 final_pop, halloffame, log, hist = opt.run(max_ngen=maxGenerations, cp_filename='checkpoints/checkpoint.pkl')
 
-best_params = evaluator.param_dict(halloffame[0])
-print(best_params)
+for i in range(len(halloffame)):
+    best_params = evaluator.param_dict(halloffame[i])
+    print('Best %d solution: \n' % i + str(best_params))
 
-best_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=best_params)
-if plotResponses: plot_responses(best_responses, filename='./figures/Best_responses.png')
-
+    best_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=best_params)
+    if plotResponses: plot_responses(best_responses, filename='./figures/Best_responses_%i.png' % i)
