@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=200
+offspringSize=20
 maxGenerations=200
 
 morphoFile = './morphology/threeCompartmental.swc'
@@ -53,7 +53,7 @@ feature_configs = json.load(open(workDir+'features.json'))
 print(feature_configs)
 
 fitness_calculator = l5pc_evaluator.define_fitness_calculator(fitness_protocols)
-# print(fitness_calculator)
+print(fitness_calculator)
 
 sim = ephys.simulators.NrnSimulator()
 
