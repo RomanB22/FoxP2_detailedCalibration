@@ -52,13 +52,6 @@
         "value": -85
     },
     {
-        "param_name": "cm",
-        "sectionlist": "apical",
-        "type": "section",
-        "dist_type": "uniform",
-        "value": 1
-    },
-    {
         "param_name": "ena",
         "sectionlist": "somatic",
         "type": "section",
