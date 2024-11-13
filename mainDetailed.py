@@ -94,7 +94,7 @@ release_params = {
 
 def plot_responses(responses, filename='./figures/responses.png'):
     fig, axes = plt.subplots(len(responses), figsize=(10,8))
-    for index, (resp_name, response) in enumerate(sorted(responses.items())):
+    for index, (resp_name, response) in enumerate(responses.items()):
         axes[index].plot(response['time'], response['voltage'], label=resp_name)
         axes[index].set_title(resp_name)
     fig.tight_layout()
