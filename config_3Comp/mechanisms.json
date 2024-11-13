@@ -3,31 +3,51 @@
         "pas"
     ],
     "apical": [
+        "NaTs",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
         "Ih",
         "Im",
-        "K_P",
-        "Nafx",
-        "kdrin"
+        "Ca_HVA",
+        "Ca_LVA"
     ],
     "basal": [
+        "NaTs",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
         "Ih",
         "Im",
-        "K_P",
-        "Nafx",
-        "kdrin"
+        "Ca_HVA",
+        "Ca_LVA"
     ],
     "axonal": [
+        "NaTs",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
         "Ih",
         "Im",
-        "K_P",
-        "Nafx",
-        "kdrin"
+        "Ca_HVA",
+        "Ca_LVA"
     ],
     "somatic": [
+        "NaTs",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
         "Ih",
         "Im",
-        "K_P",
-        "Nafx",
-        "kdrin"
+        "Ca_HVA",
+        "Ca_LVA"
     ]
 }

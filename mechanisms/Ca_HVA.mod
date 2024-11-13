@@ -1,9 +1,9 @@
-: Reference:		Kole,Hallermann,and Stuart, J. Neurosci. 2006
+: Reference:		Reuveni, Friedman, Amitai, and Gutnick, J.Neurosci. 1993
 
 NEURON	{
-	SUFFIX Ih
-	NONSPECIFIC_CURRENT ihcn
-	RANGE gbar, g, ihcn 
+	SUFFIX Ca_HVA
+	USEION ca READ eca WRITE ica
+	RANGE gbar, g, ica 
 }
 
 UNITS	{
@@ -14,49 +14,60 @@ UNITS	{
 
 PARAMETER	{
 	gbar = 0.00001 (S/cm2) 
-	ehcn =  -45.0 (mV)
 }
 
 ASSIGNED	{
 	v	(mV)
-	ihcn	(mA/cm2)
+	eca	(mV)
+	ica	(mA/cm2)
 	g	(S/cm2)
 	mInf
 	mTau
 	mAlpha
 	mBeta
+	hInf
+	hTau
+	hAlpha
+	hBeta
 }
 
 STATE	{ 
 	m
+	h
 }
 
 BREAKPOINT	{
 	SOLVE states METHOD cnexp
-	g = gbar*m
-	ihcn = g*(v-ehcn)
+	g = gbar*m*m*h
+	ica = g*(v-eca)
 }
 
 DERIVATIVE states	{
 	rates()
 	m' = (mInf-m)/mTau
+	h' = (hInf-h)/hTau
 }
 
 INITIAL{
 	rates()
 	m = mInf
+	h = hInf
 }
 
 PROCEDURE rates(){
 	UNITSOFF
-    :    if(v == -154.9){
-    :       v = v + 0.0001
-    :    }
-		:mAlpha =  0.001*6.43*(v+154.9)/(exp((v+154.9)/11.9)-1)
-		mAlpha = 0.001 * 6.43 * vtrap(v + 154.9, 11.9)
-		mBeta  =  0.001*193*exp(v/33.1)
+    :   if((v == -27) ){        
+    :       v = v+0.0001
+    :   }
+		:mAlpha =  (0.055*(-27-v))/(exp((-27-v)/3.8) - 1)
+		mAlpha = 0.055 * vtrap(-27 - v, 3.8)        
+		mBeta  =  (0.94*exp((-75-v)/17))
 		mInf = mAlpha/(mAlpha + mBeta)
 		mTau = 1/(mAlpha + mBeta)
+		hAlpha =  (0.000457*exp((-13-v)/50))
+		hBeta  =  (0.0065/(exp((-v-15)/28)+1))
+		hInf = hAlpha/(hAlpha + hBeta)
+		hTau = 1/(hAlpha + hBeta)
 	UNITSON
 }
 

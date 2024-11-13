@@ -2,1164 +2,1476 @@
   "IDRest_0": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "spike_count_stimint",
         "val": [
           0.0,
           0.001
         ],
-        "n": 14,
+        "n": 16,
         "efel_settings": {
-          "Threshold": -59.2999267578125
+          "Threshold": -72.61328125
         },
-        "efeature_name": "Spikecount"
-      },
-      {
-        "feature": "steady_state_voltage_stimend",
-        "val": [
-          -78.318351792826,
-          4.07809955208595
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -59.2999267578125
-        },
-        "efeature_name": "steady_state_voltage_stimend"
-      },
-      {
-        "feature": "steady_state_hyper",
-        "val": [
-          -78.50359223138692,
-          3.679596321801558
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -59.2999267578125
-        },
-        "efeature_name": "steady_state_hyper"
-      },
-      {
-        "feature": "steady_state_voltage",
-        "val": [
-          -80.72501041060015,
-          2.398420055383007
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -59.2999267578125
-        },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "spike_count_stimint"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -80.45496716828941,
-          2.9076849785065813
+          -94.58639574050905,
+          2.744209911565234
         ],
-        "n": 14,
+        "n": 16,
         "efel_settings": {
-          "Threshold": -59.2999267578125
+          "Threshold": -72.61328125
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          27.328429688503203,
-          32.11828357420721
+          24.431440357178626,
+          30.49689242862938
         ],
-        "n": 14,
+        "n": 16,
         "efel_settings": {
-          "Threshold": -59.2999267578125
+          "Threshold": -72.61328125
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          455.21439610674213,
-          176.0601076430637
+          -95.46246204371137,
+          2.495166613641938
         ],
-        "n": 7,
+        "n": 16,
         "efel_settings": {
-          "Threshold": -59.2999267578125
+          "Threshold": -72.61328125
         },
-        "efeature_name": "ohmic_input_resistance"
-      },
-      {
-        "feature": "depol_block_bool",
-        "val": [
-          0.0,
-          0.001
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -59.2999267578125
-        },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "minimum_voltage"
       }
     ]
   },
   "IDRest_50": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "spike_count_stimint",
         "val": [
-          0.07142857142857142,
-          0.25753937681885636
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "Spikecount"
-      },
-      {
-        "feature": "mean_frequency",
-        "val": [
-          4.727151764648014,
+          0.0,
           0.001
         ],
-        "n": 1,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -44.4073486328125
+          "Threshold": -59.97900390625
         },
-        "efeature_name": "mean_frequency"
-      },
-      {
-        "feature": "AP1_amp",
-        "val": [
-          52.72603149435714,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "AP1_amp"
-      },
-      {
-        "feature": "AP_width",
-        "val": [
-          1.4999999999999147,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "AP_width"
-      },
-      {
-        "feature": "AP_height",
-        "val": [
-          12.964739990282759,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "AP_height"
-      },
-      {
-        "feature": "AP_duration_half_width",
-        "val": [
-          1.299999999999926,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "AP_duration_half_width"
-      },
-      {
-        "feature": "min_AHP_values",
-        "val": [
-          -58.550491332982254,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "min_AHP_values"
-      },
-      {
-        "feature": "AHP_depth",
-        "val": [
-          23.870261801468324,
-          0.001
-        ],
-        "n": 1,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "AHP_depth"
-      },
-      {
-        "feature": "steady_state_voltage_stimend",
-        "val": [
-          -64.38206533704444,
-          7.370465958570717
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "steady_state_voltage_stimend"
-      },
-      {
-        "feature": "steady_state_hyper",
-        "val": [
-          -64.05588379632484,
-          7.65803585709452
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "steady_state_hyper"
-      },
-      {
-        "feature": "steady_state_voltage",
-        "val": [
-          -80.66159796950576,
-          2.997688365324942
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "spike_count_stimint"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -81.24226794968003,
-          4.079323827129605
+          -95.46836450302709,
+          3.4442336108346376
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -44.4073486328125
+          "Threshold": -59.97900390625
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          30.665436867907292,
-          14.19746960734719
+          26.043465959444685,
+          12.71597042276
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -44.4073486328125
+          "Threshold": -59.97900390625
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          490.3111546005501,
-          192.62432632002285
+          -94.97740506258627,
+          3.357288753229441
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -44.4073486328125
+          "Threshold": -59.97900390625
         },
-        "efeature_name": "ohmic_input_resistance"
-      },
-      {
-        "feature": "depol_block_bool",
-        "val": [
-          0.0,
-          0.001
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -44.4073486328125
-        },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "minimum_voltage"
       }
     ]
   },
   "IDRest_100": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "peak_time",
         "val": [
-          3.0476190476190474,
-          2.8531718436086178
-        ],
-        "n": 21,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "Spikecount"
-      },
-      {
-        "feature": "mean_frequency",
-        "val": [
-          10.55098569736505,
-          6.006840149586866
+          283.7855208333376,
+          57.73527236063028
         ],
         "n": 16,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "mean_frequency"
+        "efeature_name": "peak_time"
       },
       {
-        "feature": "ISI_CV",
+        "feature": "time_to_first_spike",
         "val": [
-          0.0684924793081383,
-          0.0480699857897036
-        ],
-        "n": 8,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "ISI_CV"
-      },
-      {
-        "feature": "AP1_amp",
-        "val": [
-          57.2150487900014,
-          11.620551539495057
+          167.8626245754968,
+          99.52521802758703
         ],
         "n": 16,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "AP1_amp"
+        "efeature_name": "time_to_first_spike"
       },
       {
-        "feature": "AP_width",
+        "feature": "ISI_values",
         "val": [
-          1.5984444444445896,
-          0.21778639438737302
+          101.48928571430342,
+          28.66050138378034
         ],
-        "n": 15,
+        "n": 7,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "AP_width"
+        "efeature_name": "ISI_values"
       },
       {
-        "feature": "AP_height",
+        "feature": "irregularity_index",
         "val": [
-          17.589875308670962,
-          10.353275645966411
+          5.953333333332468,
+          2.899145467961923
         ],
-        "n": 16,
+        "n": 5,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "AP_height"
-      },
-      {
-        "feature": "AP_duration_half_width",
-        "val": [
-          1.3225000000001312,
-          0.27367166560601
-        ],
-        "n": 16,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "AP_duration_half_width"
-      },
-      {
-        "feature": "min_AHP_values",
-        "val": [
-          -52.499667938238645,
-          3.6801741506007914
-        ],
-        "n": 15,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "min_AHP_values"
-      },
-      {
-        "feature": "AHP_depth",
-        "val": [
-          29.186862823480098,
-          5.004579832666361
-        ],
-        "n": 15,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "AHP_depth"
-      },
-      {
-        "feature": "min_voltage_between_spikes",
-        "val": [
-          -53.71394829550782,
-          3.8072265268383827
-        ],
-        "n": 13,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "min_voltage_between_spikes"
+        "efeature_name": "irregularity_index"
       },
       {
         "feature": "adaptation_index",
         "val": [
-          0.013477876570345153,
-          0.014204979989029639
+          0.017690896955179596,
+          0.015371065938942292
         ],
-        "n": 8,
+        "n": 5,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
         "efeature_name": "adaptation_index"
       },
       {
-        "feature": "steady_state_voltage_stimend",
+        "feature": "spike_count_stimint",
         "val": [
-          -51.74727516241596,
-          8.55765845559696
+          1.72,
+          1.8225257199831228
         ],
-        "n": 21,
+        "n": 25,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "steady_state_voltage_stimend"
+        "efeature_name": "spike_count_stimint"
       },
       {
-        "feature": "steady_state_hyper",
+        "feature": "AP_height",
         "val": [
-          -50.71906297955041,
-          11.590907832097688
+          5.930583413435443,
+          9.139865829539572
         ],
-        "n": 21,
+        "n": 16,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "steady_state_hyper"
+        "efeature_name": "AP_height"
       },
       {
-        "feature": "steady_state_voltage",
+        "feature": "min_AHP_values",
         "val": [
-          -81.26751941157443,
-          2.6521976663337843
+          -68.00529075453014,
+          3.7255887188716685
         ],
-        "n": 21,
+        "n": 15,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -62.887566124093006,
+          1.7143182554773408
+        ],
+        "n": 7,
+        "efel_settings": {
+          "Threshold": -45.69677734375
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.130625000000113,
+          0.32516762504132646
+        ],
+        "n": 16,
+        "efel_settings": {
+          "Threshold": -45.69677734375
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          2.64156250000027,
+          0.37069073510645156
+        ],
+        "n": 16,
+        "efel_settings": {
+          "Threshold": -45.69677734375
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          0.8514583333334216,
+          0.1506143380274557
+        ],
+        "n": 16,
+        "efel_settings": {
+          "Threshold": -45.69677734375
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          1.7901041666668482,
+          0.24383400884931836
+        ],
+        "n": 16,
+        "efel_settings": {
+          "Threshold": -45.69677734375
+        },
+        "efeature_name": "AP_fall_time"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -82.1497778498449,
-          3.1984218817628483
+          -97.51555097419983,
+          3.4145327500457756
         ],
-        "n": 21,
+        "n": 25,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          25.195127089407702,
-          6.512117337333008
+          23.713415573149877,
+          7.86110887244937
         ],
-        "n": 21,
+        "n": 25,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          449.4477120494863,
-          174.59600743515634
+          -96.43367797851104,
+          3.204758623925092
         ],
-        "n": 21,
+        "n": 25,
         "efel_settings": {
-          "Threshold": -32.001953125
+          "Threshold": -45.69677734375
         },
-        "efeature_name": "ohmic_input_resistance"
-      },
-      {
-        "feature": "depol_block_bool",
-        "val": [
-          0.0,
-          0.001
-        ],
-        "n": 21,
-        "efel_settings": {
-          "Threshold": -32.001953125
-        },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "minimum_voltage"
       }
     ]
   },
   "IDRest_150": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "peak_time",
         "val": [
-          7.857142857142857,
-          4.033026918140886
+          259.93220680834764,
+          17.977410835156444
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "Spikecount"
+        "efeature_name": "peak_time"
       },
       {
-        "feature": "mean_frequency",
+        "feature": "time_to_first_spike",
         "val": [
-          22.19510536913478,
-          6.168964073048514
+          51.57114730277046,
+          27.72914747760253
         ],
-        "n": 12,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "mean_frequency"
+        "efeature_name": "time_to_first_spike"
       },
       {
-        "feature": "ISI_CV",
+        "feature": "ISI_values",
         "val": [
-          0.05324099473253343,
-          0.019644356493622728
+          51.833252164508615,
+          12.051138849797155
         ],
-        "n": 12,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "ISI_CV"
+        "efeature_name": "ISI_values"
       },
       {
-        "feature": "AP1_amp",
+        "feature": "irregularity_index",
         "val": [
-          58.25744476318007,
-          11.316783309157836
+          3.0371446608962986,
+          2.789398994078023
         ],
-        "n": 12,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "AP1_amp"
-      },
-      {
-        "feature": "AP_width",
-        "val": [
-          1.763651626151784,
-          0.2512827110899103
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "AP_width"
-      },
-      {
-        "feature": "AP_height",
-        "val": [
-          17.54697502767407,
-          8.165361634094628
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "AP_height"
-      },
-      {
-        "feature": "AP_duration_half_width",
-        "val": [
-          1.39383063695577,
-          0.2633114702940897
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "AP_duration_half_width"
-      },
-      {
-        "feature": "min_AHP_values",
-        "val": [
-          -47.9295525676585,
-          3.174109704494483
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "min_AHP_values"
-      },
-      {
-        "feature": "AHP_depth",
-        "val": [
-          34.67795292714628,
-          5.991793824521544
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "AHP_depth"
-      },
-      {
-        "feature": "min_voltage_between_spikes",
-        "val": [
-          -48.76357375071862,
-          3.1402124737935675
-        ],
-        "n": 12,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "min_voltage_between_spikes"
+        "efeature_name": "irregularity_index"
       },
       {
         "feature": "adaptation_index",
         "val": [
-          0.0011089223320292954,
-          0.015166973924711412
+          0.007519673902646174,
+          0.014496228547961629
         ],
-        "n": 12,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
         "efeature_name": "adaptation_index"
       },
       {
-        "feature": "steady_state_voltage_stimend",
+        "feature": "spike_count_stimint",
         "val": [
-          -45.5113785612594,
-          8.433428804391301
+          8.227272727272727,
+          2.1936233658206645
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "steady_state_voltage_stimend"
+        "efeature_name": "spike_count_stimint"
       },
       {
-        "feature": "steady_state_hyper",
+        "feature": "AP_height",
         "val": [
-          -44.54613515227821,
-          12.99922782540288
+          5.433818109260971,
+          8.213127260859837
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "steady_state_hyper"
+        "efeature_name": "AP_height"
       },
       {
-        "feature": "steady_state_voltage",
+        "feature": "min_AHP_values",
         "val": [
-          -81.86561499453093,
-          3.053192440677071
+          -62.92503515175932,
+          2.7067024819161367
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -60.49531573713866,
+          2.2764632519600427
+        ],
+        "n": 22,
+        "efel_settings": {
+          "Threshold": -41.760009765625
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.1661734225371672,
+          0.33672778524097846
+        ],
+        "n": 22,
+        "efel_settings": {
+          "Threshold": -41.760009765625
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          2.655941230486928,
+          0.35076157281077186
+        ],
+        "n": 22,
+        "efel_settings": {
+          "Threshold": -41.760009765625
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          0.8939730093139988,
+          0.14446830333037994
+        ],
+        "n": 22,
+        "efel_settings": {
+          "Threshold": -41.760009765625
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          1.761968221172929,
+          0.23119886650536142
+        ],
+        "n": 22,
+        "efel_settings": {
+          "Threshold": -41.760009765625
+        },
+        "efeature_name": "AP_fall_time"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -82.57386321318315,
-          3.8008805340608096
+          -97.9327897102602,
+          4.212041003481142
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          20.038074765370357,
-          4.115942224074866
+          19.71691620786078,
+          5.573165272005163
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          334.20373081920854,
-          90.67139756069352
+          -96.33081443092333,
+          3.6864470425910465
         ],
-        "n": 14,
+        "n": 22,
         "efel_settings": {
-          "Threshold": -27.6226806640625
+          "Threshold": -41.760009765625
         },
-        "efeature_name": "ohmic_input_resistance"
-      },
-      {
-        "feature": "depol_block_bool",
-        "val": [
-          0.0,
-          0.001
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -27.6226806640625
-        },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "minimum_voltage"
       }
     ]
   },
   "IDRest_200": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "peak_time",
         "val": [
-          11.285714285714286,
-          5.16529496823207
+          253.23710844711286,
+          9.701693132761712
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "Spikecount"
+        "efeature_name": "peak_time"
       },
       {
-        "feature": "mean_frequency",
+        "feature": "time_to_first_spike",
         "val": [
-          31.72025421939152,
-          5.910812354268099
+          30.48554124216518,
+          16.358838504680115
         ],
-        "n": 18,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "mean_frequency"
+        "efeature_name": "time_to_first_spike"
       },
       {
-        "feature": "ISI_CV",
+        "feature": "ISI_values",
         "val": [
-          0.04612146620501873,
-          0.01679414081624204
+          34.10696429149896,
+          6.260923449285407
         ],
-        "n": 18,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "ISI_CV"
+        "efeature_name": "ISI_values"
       },
       {
-        "feature": "AP1_amp",
+        "feature": "irregularity_index",
         "val": [
-          57.71782582600492,
-          11.691586570784699
+          1.3669500753878256,
+          0.6933397716906328
         ],
-        "n": 18,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "AP1_amp"
-      },
-      {
-        "feature": "AP_width",
-        "val": [
-          2.0047781267390876,
-          0.35849973439288546
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "AP_width"
-      },
-      {
-        "feature": "AP_height",
-        "val": [
-          16.749146639990528,
-          6.61952819797262
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "AP_height"
-      },
-      {
-        "feature": "AP_duration_half_width",
-        "val": [
-          1.5104102220402598,
-          0.29222593614195136
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "AP_duration_half_width"
-      },
-      {
-        "feature": "min_AHP_values",
-        "val": [
-          -44.694594574720334,
-          3.746474115149364
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "min_AHP_values"
-      },
-      {
-        "feature": "AHP_depth",
-        "val": [
-          35.795860347207174,
-          7.653083247459719
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "AHP_depth"
-      },
-      {
-        "feature": "min_voltage_between_spikes",
-        "val": [
-          -45.115950203993094,
-          3.7361068541270535
-        ],
-        "n": 18,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "min_voltage_between_spikes"
+        "efeature_name": "irregularity_index"
       },
       {
         "feature": "adaptation_index",
         "val": [
-          0.0014310259077603426,
-          0.004800738843098409
+          0.0028982030121895864,
+          0.004641421216781756
         ],
-        "n": 18,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
         "efeature_name": "adaptation_index"
       },
       {
-        "feature": "steady_state_voltage_stimend",
+        "feature": "spike_count_stimint",
         "val": [
-          -41.31622174547254,
-          8.372026628941239
+          12.833333333333334,
+          2.733536577809454
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "steady_state_voltage_stimend"
+        "efeature_name": "spike_count_stimint"
       },
       {
-        "feature": "steady_state_hyper",
+        "feature": "AP_height",
         "val": [
-          -41.5935036213995,
-          11.293107254161168
+          4.863843147116374,
+          6.840299904739195
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "steady_state_hyper"
+        "efeature_name": "AP_height"
       },
       {
-        "feature": "steady_state_voltage",
+        "feature": "min_AHP_values",
         "val": [
-          -80.66098248563587,
-          4.006097191039547
+          -59.94405836614692,
+          3.076634401439617
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -57.362606507820296,
+          2.6596895675068706
+        ],
+        "n": 24,
+        "efel_settings": {
+          "Threshold": -38.1436767578125
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.253045028569038,
+          0.3546968625311483
+        ],
+        "n": 24,
+        "efel_settings": {
+          "Threshold": -38.1436767578125
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          2.7682125098487824,
+          0.35558035654960557
+        ],
+        "n": 24,
+        "efel_settings": {
+          "Threshold": -38.1436767578125
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          0.9520392485374954,
+          0.1567074067537601
+        ],
+        "n": 24,
+        "efel_settings": {
+          "Threshold": -38.1436767578125
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          1.816173261311287,
+          0.23309414828623368
+        ],
+        "n": 24,
+        "efel_settings": {
+          "Threshold": -38.1436767578125
+        },
+        "efeature_name": "AP_fall_time"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -80.90907050863756,
-          4.638994113554825
+          -97.34049494343412,
+          5.905020915255584
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          15.917006605703234,
-          4.069486557711328
+          14.85065983813964,
+          5.272665468754291
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          288.06125007214376,
-          92.9226996761525
+          -95.24052632648817,
+          5.333992525410297
         ],
-        "n": 21,
+        "n": 24,
         "efel_settings": {
-          "Threshold": -24.097900390625
+          "Threshold": -38.1436767578125
         },
-        "efeature_name": "ohmic_input_resistance"
-      },
-      {
-        "feature": "depol_block_bool",
-        "val": [
-          0.0,
-          0.001
-        ],
-        "n": 21,
-        "efel_settings": {
-          "Threshold": -24.097900390625
-        },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "minimum_voltage"
       }
     ]
   },
   "IDRest_250": {
     "soma": [
       {
-        "feature": "Spikecount",
+        "feature": "peak_time",
         "val": [
-          13.3125,
-          5.542097414336922
+          247.85004440998478,
+          8.420247791954893
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "Spikecount"
+        "efeature_name": "peak_time"
       },
       {
-        "feature": "mean_frequency",
+        "feature": "time_to_first_spike",
         "val": [
-          36.71260709957985,
-          5.8765863675000505
+          21.069961532020447,
+          10.02905420098772
         ],
-        "n": 14,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "mean_frequency"
+        "efeature_name": "time_to_first_spike"
       },
       {
-        "feature": "ISI_CV",
+        "feature": "ISI_values",
         "val": [
-          0.05800454285584778,
-          0.018793876577054166
+          27.537891366200558,
+          5.321486203023669
         ],
-        "n": 14,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "ISI_CV"
+        "efeature_name": "ISI_values"
       },
       {
-        "feature": "AP1_amp",
+        "feature": "irregularity_index",
         "val": [
-          58.70496782574786,
-          11.659573862319405
+          1.1760805215708194,
+          0.5783519437424958
         ],
-        "n": 14,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "AP1_amp"
-      },
-      {
-        "feature": "AP_width",
-        "val": [
-          2.225067612678936,
-          0.5271470155477888
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "AP_width"
-      },
-      {
-        "feature": "AP_height",
-        "val": [
-          16.69959469860665,
-          5.422130227343197
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "AP_height"
-      },
-      {
-        "feature": "AP_duration_half_width",
-        "val": [
-          1.5869827674047323,
-          0.324674971356696
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "AP_duration_half_width"
-      },
-      {
-        "feature": "min_AHP_values",
-        "val": [
-          -42.55718479089759,
-          4.298882894667188
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "min_AHP_values"
-      },
-      {
-        "feature": "AHP_depth",
-        "val": [
-          39.578974833474696,
-          7.831441082664738
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "AHP_depth"
-      },
-      {
-        "feature": "min_voltage_between_spikes",
-        "val": [
-          -42.86502827118699,
-          4.255164758313764
-        ],
-        "n": 14,
-        "efel_settings": {
-          "Threshold": -21.0003662109375
-        },
-        "efeature_name": "min_voltage_between_spikes"
+        "efeature_name": "irregularity_index"
       },
       {
         "feature": "adaptation_index",
         "val": [
-          0.0016801641917304703,
-          0.004572207551641048
+          0.00245292427455649,
+          0.0039010619795731296
         ],
-        "n": 14,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
         "efeature_name": "adaptation_index"
       },
       {
-        "feature": "steady_state_voltage_stimend",
+        "feature": "spike_count_stimint",
         "val": [
-          -37.893515408041765,
-          7.389536814927726
+          16.304347826086957,
+          3.6645752183835616
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "steady_state_voltage_stimend"
+        "efeature_name": "spike_count_stimint"
       },
       {
-        "feature": "steady_state_hyper",
+        "feature": "AP_height",
         "val": [
-          -41.10786043165224,
-          6.07166242213698
+          3.609044371883128,
+          5.683904597487613
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "steady_state_hyper"
+        "efeature_name": "AP_height"
       },
       {
-        "feature": "steady_state_voltage",
+        "feature": "min_AHP_values",
         "val": [
-          -81.94683206714161,
-          3.5043554156940093
+          -57.33294133790054,
+          3.5560263964207786
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "steady_state_voltage"
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -54.66414630691488,
+          3.210944859858218
+        ],
+        "n": 23,
+        "efel_settings": {
+          "Threshold": -35.229248046875
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.345438835461332,
+          0.3730500920098874
+        ],
+        "n": 23,
+        "efel_settings": {
+          "Threshold": -35.229248046875
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          2.8752155804555977,
+          0.34834794953965154
+        ],
+        "n": 23,
+        "efel_settings": {
+          "Threshold": -35.229248046875
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          1.0125526391767694,
+          0.1631764892440156
+        ],
+        "n": 23,
+        "efel_settings": {
+          "Threshold": -35.229248046875
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          1.8626629412788285,
+          0.22312239387847296
+        ],
+        "n": 23,
+        "efel_settings": {
+          "Threshold": -35.229248046875
+        },
+        "efeature_name": "AP_fall_time"
       },
       {
         "feature": "voltage_base",
         "val": [
-          -82.45530861885322,
-          4.65009083171722
+          -98.65767682304222,
+          5.583757246256873
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
         "efeature_name": "voltage_base"
       },
       {
         "feature": "decay_time_constant_after_stim",
         "val": [
-          15.90608577515422,
-          3.7559416333988747
+          14.572783458141505,
+          4.272011728068064
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
         "efeature_name": "decay_time_constant_after_stim"
       },
       {
-        "feature": "ohmic_input_resistance",
+        "feature": "minimum_voltage",
         "val": [
-          239.59590222278567,
-          45.533525357412245
+          -96.03850363025349,
+          4.770963578921426
         ],
-        "n": 16,
+        "n": 23,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -35.229248046875
         },
-        "efeature_name": "ohmic_input_resistance"
+        "efeature_name": "minimum_voltage"
+      }
+    ]
+  },
+  "IDRest_300": {
+    "soma": [
+      {
+        "feature": "peak_time",
+        "val": [
+          244.21818419426822,
+          7.374610230429012
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "peak_time"
       },
       {
-        "feature": "depol_block_bool",
+        "feature": "time_to_first_spike",
         "val": [
-          0.0,
-          0.001
+          17.649430131054284,
+          4.0347755303421
         ],
-        "n": 16,
+        "n": 18,
         "efel_settings": {
-          "Threshold": -21.0003662109375
+          "Threshold": -33.1845703125
         },
-        "efeature_name": "depol_block_bool"
+        "efeature_name": "time_to_first_spike"
+      },
+      {
+        "feature": "ISI_values",
+        "val": [
+          26.213738343630364,
+          3.0620359939734367
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "ISI_values"
+      },
+      {
+        "feature": "irregularity_index",
+        "val": [
+          1.3401063519813219,
+          0.4432160911522148
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "irregularity_index"
+      },
+      {
+        "feature": "adaptation_index",
+        "val": [
+          0.0028660425741730425,
+          0.004357115307363926
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "adaptation_index"
+      },
+      {
+        "feature": "spike_count_stimint",
+        "val": [
+          16.72222222222222,
+          2.5123153454655585
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "spike_count_stimint"
+      },
+      {
+        "feature": "AP_height",
+        "val": [
+          1.8620129247052783,
+          5.280660605696053
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "AP_height"
+      },
+      {
+        "feature": "min_AHP_values",
+        "val": [
+          -55.057911257923024,
+          4.691305301455134
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -52.46711604257634,
+          4.3307852806371585
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.584472676730799,
+          0.3708775669281353
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          3.2104339086684175,
+          0.4259414409710245
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          1.1408976372565434,
+          0.17107811882535834
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          2.069536271411874,
+          0.29891983717528486
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "AP_fall_time"
+      },
+      {
+        "feature": "voltage_base",
+        "val": [
+          -96.96613184337554,
+          4.686035563863636
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "voltage_base"
+      },
+      {
+        "feature": "decay_time_constant_after_stim",
+        "val": [
+          13.990285189884872,
+          3.3649120717129666
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "decay_time_constant_after_stim"
+      },
+      {
+        "feature": "minimum_voltage",
+        "val": [
+          -94.69947747123574,
+          4.3209212632242195
+        ],
+        "n": 18,
+        "efel_settings": {
+          "Threshold": -33.1845703125
+        },
+        "efeature_name": "minimum_voltage"
+      }
+    ]
+  },
+  "IDRest_350": {
+    "soma": [
+      {
+        "feature": "peak_time",
+        "val": [
+          240.32816738333142,
+          5.835197376765966
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "peak_time"
+      },
+      {
+        "feature": "time_to_first_spike",
+        "val": [
+          14.877207908832023,
+          3.1425396665047582
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "time_to_first_spike"
+      },
+      {
+        "feature": "ISI_values",
+        "val": [
+          24.992542639280078,
+          1.6609068350167244
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "ISI_values"
+      },
+      {
+        "feature": "irregularity_index",
+        "val": [
+          1.1911594483948116,
+          0.3089219357982737
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "irregularity_index"
+      },
+      {
+        "feature": "adaptation_index",
+        "val": [
+          0.004098429750967303,
+          0.0030376730095430047
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "adaptation_index"
+      },
+      {
+        "feature": "spike_count_stimint",
+        "val": [
+          17.466666666666665,
+          1.2578641509408806
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "spike_count_stimint"
+      },
+      {
+        "feature": "AP_height",
+        "val": [
+          0.1731110060054866,
+          4.291191922112897
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "AP_height"
+      },
+      {
+        "feature": "min_AHP_values",
+        "val": [
+          -52.43639880395025,
+          5.631753097599301
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -49.78393930364465,
+          5.380698586344326
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          1.786902562779652,
+          0.3378861909866844
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          3.49753996101397,
+          0.5080224071239823
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          1.2686059511525012,
+          0.17657663945991517
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          2.2289340098614683,
+          0.44172966418349924
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "AP_fall_time"
+      },
+      {
+        "feature": "voltage_base",
+        "val": [
+          -95.18378030756466,
+          5.508461683139474
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "voltage_base"
+      },
+      {
+        "feature": "decay_time_constant_after_stim",
+        "val": [
+          13.466678704638865,
+          3.6738941148269753
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "decay_time_constant_after_stim"
+      },
+      {
+        "feature": "minimum_voltage",
+        "val": [
+          -93.06096883137052,
+          5.585546700997865
+        ],
+        "n": 15,
+        "efel_settings": {
+          "Threshold": -30.895751953125
+        },
+        "efeature_name": "minimum_voltage"
+      }
+    ]
+  },
+  "IDRest_500": {
+    "soma": [
+      {
+        "feature": "peak_time",
+        "val": [
+          227.09641636141956,
+          18.309394565541893
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "peak_time"
+      },
+      {
+        "feature": "time_to_first_spike",
+        "val": [
+          10.220797652421702,
+          1.5976684195095983
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "time_to_first_spike"
+      },
+      {
+        "feature": "ISI_values",
+        "val": [
+          22.024880791724648,
+          1.480712257313429
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "ISI_values"
+      },
+      {
+        "feature": "irregularity_index",
+        "val": [
+          1.375339270292857,
+          0.4593879014243721
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "irregularity_index"
+      },
+      {
+        "feature": "adaptation_index",
+        "val": [
+          0.012104656468282984,
+          0.007788227512942308
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "adaptation_index"
+      },
+      {
+        "feature": "spike_count_stimint",
+        "val": [
+          19.846153846153847,
+          2.069788314934417
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "spike_count_stimint"
+      },
+      {
+        "feature": "AP_height",
+        "val": [
+          -4.124036379756834,
+          4.127327648312098
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "AP_height"
+      },
+      {
+        "feature": "min_AHP_values",
+        "val": [
+          -44.3853513191755,
+          9.335575950038535
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "min_AHP_values"
+      },
+      {
+        "feature": "depolarized_base",
+        "val": [
+          -41.642669480291794,
+          8.902824939936343
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "depolarized_base"
+      },
+      {
+        "feature": "AP_duration_half_width",
+        "val": [
+          2.117375541125663,
+          0.4541926360172783
+        ],
+        "n": 11,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "AP_duration_half_width"
+      },
+      {
+        "feature": "AP_duration",
+        "val": [
+          2.5989631202131185,
+          2.120302745270234
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "AP_duration"
+      },
+      {
+        "feature": "AP_rise_time",
+        "val": [
+          0.6957675657674406,
+          2.0020022102442354
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "AP_rise_time"
+      },
+      {
+        "feature": "AP_fall_time",
+        "val": [
+          2.827799422799789,
+          2.370689685362086
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "AP_fall_time"
+      },
+      {
+        "feature": "voltage_base",
+        "val": [
+          -96.32594041848007,
+          3.530701137950511
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "voltage_base"
+      },
+      {
+        "feature": "decay_time_constant_after_stim",
+        "val": [
+          11.137783764335635,
+          1.9718002431913444
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "decay_time_constant_after_stim"
+      },
+      {
+        "feature": "minimum_voltage",
+        "val": [
+          -93.33819345326157,
+          3.613910684334575
+        ],
+        "n": 13,
+        "efel_settings": {
+          "Threshold": -21.64892578125
+        },
+        "efeature_name": "minimum_voltage"
       }
     ]
   }

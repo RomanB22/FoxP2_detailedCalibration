@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=100
-maxGenerations=200
+offspringSize=2
+maxGenerations=2
 
-morphoFile = './morphology/threeCompartmental.swc'
+morphoFile = './morphology/detailedMorpho.swc' # detailedMorpho threeCompartmental
 workDir = './config_3Comp/'
 
 if plotMorpho:
@@ -65,34 +65,60 @@ evaluator = ephys.evaluators.CellEvaluator(
         sim=sim)
 
 release_params = {
-    'gIhbar_Ih.apical': 0,
-    'gIhbar_Ih.somatic': 0,
     'g_pas.all': 7.5e-05,
     'e_pas.all': -80,
     'cm.all': 1,
-    'gNaTs2_tbar_NaTs2_t.apical': 0.026145,
-    'gSKv3_1bar_SKv3_1.apical': 0.004226,
-    'gImbar_Im.apical': 0.000143,
-    'gNaTa_tbar_NaTa_t.axonal': 3.137968,
-    'gK_Tstbar_K_Tst.axonal': 0.089259,
-    'gamma_CaDynamics_E2.axonal': 0.002910,
-    'gNap_Et2bar_Nap_Et2.axonal': 0.006827,
-    'gSK_E2bar_SK_E2.axonal': 0.007104,
-    'gCa_HVAbar_Ca_HVA.axonal': 0.000990,
-    'gK_Pstbar_K_Pst.axonal': 0.973538,
-    'gSKv3_1bar_SKv3_1.axonal': 1.021945,
-    'decay_CaDynamics_E2.axonal': 287.198731,
-    'gCa_LVAstbar_Ca_LVAst.axonal': 0.008752,
-    'gamma_CaDynamics_E2.somatic': 0.000609,
-    'gSKv3_1bar_SKv3_1.somatic': 0.303472,
-    'gSK_E2bar_SK_E2.somatic': 0.008407,
-    'gCa_HVAbar_Ca_HVA.somatic': 0.000994,
-    'gNaTs2_tbar_NaTs2_t.somatic': 0.983955,
-    'decay_CaDynamics_E2.somatic': 210.485284,
-    'gCa_LVAstbar_Ca_LVAst.somatic': 0.000333
+    'cm.basal': 2,
+    'cm.apical': 2,
+    # Sodium currents
+    'gbar_NaTs.somatic': 1,
+    'gbar_NaTs.basal': 2,
+    'gbar_NaTs.apical': 2,
+    'gbar_NaTs.axonal': 10,
+    'gbar_Nap.somatic': 1e-7,
+    'gbar_Nap.basal': 1e-7,
+    'gbar_Nap.apical': 1e-7,
+    'gbar_Nap.axonal': 1e-7,
+    # Potassium currents
+    'gbar_Kv3_1.somatic': 3e-1,
+    'gbar_Kv3_1.basal': 3e-1,
+    'gbar_Kv3_1.apical': 3e-1,
+    'gbar_Kv3_1.axonal': 3e-1,
+    'gbar_K_T.somatic': 1e-3,
+    'gbar_K_T.basal': 1e-3,
+    'gbar_K_T.apical': 1e-3,
+    'gbar_K_T.axonal': 1e-3,
+    'gbar_K_P.somatic': 1e-2,
+    'gbar_K_P.basal': 1e-2,
+    'gbar_K_P.apical': 1e-2,
+    'gbar_K_P.axonal': 1e-2,
+    'gbar_SK.somatic': 3e-3,
+    'gbar_SK.basal': 3e-3,
+    'gbar_SK.apical': 3e-3,
+    'gbar_SK.axonal': 3e-3,
+    # I-HCN current
+    'gbar_Ih.somatic': 1e-4,
+    'gbar_Ih.basal': 1e-4,
+    'gbar_Ih.apical': 1e-4,
+    'gbar_Ih.axonal': 1e-4,
+    # I-M current
+    'gbar_Im.somatic': 1e-3,
+    'gbar_Im.basal': 1e-3,
+    'gbar_Im.apical': 1e-3,
+    'gbar_Im.axonal': 1e-3,
+    # CaHVA current
+    'gbar_Ca_HVA.somatic': 1e-4,
+    'gbar_Ca_HVA.basal': 1e-4,
+    'gbar_Ca_HVA.apical': 1e-4,
+    'gbar_Ca_HVA.axonal': 1e-4,
+    # CaLVA current
+    'gbar_Ca_LVA.somatic': 1e-3,
+    'gbar_Ca_LVA.basal': 1e-3,
+    'gbar_Ca_LVA.apical': 1e-3,
+    'gbar_Ca_LVA.axonal': 1e-3
 }
 
-def plot_responses(responses, filename='./figures/responses.png'):
+def plot_responses(responses, filename='./figures/optResults/responses.png'):
     fig, axes = plt.subplots(len(responses), figsize=(10,8))
     for index, (resp_name, response) in enumerate(responses.items()):
         axes[index].plot(response['time'], response['voltage'], label=resp_name)
@@ -101,7 +127,8 @@ def plot_responses(responses, filename='./figures/responses.png'):
     fig.savefig(filename)
 if plotResponses: 
     release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
-    plot_responses(release_responses, filename='./figures/Original_responses.png')
+    plot_responses(release_responses, filename='./figures/optResults/Original_responses.png')
+    plt.show()
 
 # opt = bpopt.optimisations.DEAPOptimisation(
 #     evaluator=evaluator,
@@ -119,4 +146,4 @@ for i in range(len(halloffame)):
     print('Best %d solution: \n' % i + str(best_params))
 
     best_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=best_params)
-    if plotResponses: plot_responses(best_responses, filename='./figures/Best_responses_%i.png' % i)
+    if plotResponses: plot_responses(best_responses, filename='./figures/optResults/Best_responses_%i.png' % i)
