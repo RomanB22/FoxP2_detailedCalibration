@@ -86,16 +86,17 @@ for cell in cells:
     [pprint(i.efeatures) for i in cell.recordings]
 
 step=10
-for i in range(0, len(cells[0].recordings), step):
-    plt.plot(cells[0].recordings[i].t, cells[0].recordings[i].voltage)
+cellId=1
+for i in range(0, len(cells[cellId].recordings), step):
+    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage)
 plt.show()
 
-for i in range(0, len(cells[0].recordings), step):
-    plt.plot(cells[0].recordings[i].t, cells[0].recordings[i].current)
+for i in range(0, len(cells[cellId].recordings), step):
+    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current)
 plt.show()
 
 for cell in cells:
-    cell.plot_all_recordings(show=False, output_dir='Figures/PlotSteps')
+    cell.plot_all_recordings(show=False, output_dir='figures/PlotSteps')
 
 Rheobase = {"219.2-E2000": 0.06, "219.2-F1000": 0.07, "219.2-F3001": 0.04,
             "219.2-G1000": 0.06, "219.2-H1000": 0.21, "464.2-B2000": 0.06,
@@ -110,7 +111,7 @@ protocols = bluepyefe.extract.group_efeatures(cells, targets)
 efeatures, protocol_definitions, currents = bluepyefe.extract.create_feature_protocol_files(
     cells=cells,
     protocols=protocols,
-    output_directory='./Figures/extractionFeatures'
+    output_directory='./figures/extractionFeatures'
 )
 
 pprint(efeatures)

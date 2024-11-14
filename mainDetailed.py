@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=2
-maxGenerations=2
+offspringSize=10
+maxGenerations=5
 
-morphoFile = './morphology/detailedMorpho.swc' # detailedMorpho threeCompartmental
+morphoFile = './morphology/threeCompartmental.swc' # detailedMorpho threeCompartmental
 workDir = './config_3Comp/'
 
 if plotMorpho:
@@ -64,58 +64,67 @@ evaluator = ephys.evaluators.CellEvaluator(
         fitness_calculator=fitness_calculator,
         sim=sim)
 
+gbar_NaTs=1
+gbar_Nap=0
+gbar_Kv3_1=5e-1
+gbar_K_T=0
+gbar_K_P=0
+gbar_SK=0
+gbar_Ih=0
+gbar_Im=0
+gbar_Ca_HVA=1e-3
+gbar_Ca_LVA=0
+
 release_params = {
     'g_pas.all': 7.5e-05,
-    'e_pas.all': -80,
+    'e_pas.all': -86,
     'cm.all': 1,
-    'cm.basal': 2,
-    'cm.apical': 2,
     # Sodium currents
-    'gbar_NaTs.somatic': 1,
-    'gbar_NaTs.basal': 2,
-    'gbar_NaTs.apical': 2,
-    'gbar_NaTs.axonal': 10,
-    'gbar_Nap.somatic': 1e-7,
-    'gbar_Nap.basal': 1e-7,
-    'gbar_Nap.apical': 1e-7,
-    'gbar_Nap.axonal': 1e-7,
+    'gbar_NaTs.somatic': gbar_NaTs,
+    'gbar_NaTs.basal': gbar_NaTs,
+    'gbar_NaTs.apical': gbar_NaTs,
+    'gbar_NaTs.axonal': gbar_NaTs,
+    'gbar_Nap.somatic': gbar_Nap,
+    'gbar_Nap.basal': gbar_Nap,
+    'gbar_Nap.apical': gbar_Nap,
+    'gbar_Nap.axonal': gbar_Nap,
     # Potassium currents
-    'gbar_Kv3_1.somatic': 3e-1,
-    'gbar_Kv3_1.basal': 3e-1,
-    'gbar_Kv3_1.apical': 3e-1,
-    'gbar_Kv3_1.axonal': 3e-1,
-    'gbar_K_T.somatic': 1e-3,
-    'gbar_K_T.basal': 1e-3,
-    'gbar_K_T.apical': 1e-3,
-    'gbar_K_T.axonal': 1e-3,
-    'gbar_K_P.somatic': 1e-2,
-    'gbar_K_P.basal': 1e-2,
-    'gbar_K_P.apical': 1e-2,
-    'gbar_K_P.axonal': 1e-2,
-    'gbar_SK.somatic': 3e-3,
-    'gbar_SK.basal': 3e-3,
-    'gbar_SK.apical': 3e-3,
-    'gbar_SK.axonal': 3e-3,
+    'gbar_Kv3_1.somatic': gbar_Kv3_1,
+    'gbar_Kv3_1.basal': gbar_Kv3_1,
+    'gbar_Kv3_1.apical': gbar_Kv3_1,
+    'gbar_Kv3_1.axonal': gbar_Kv3_1,
+    'gbar_K_T.somatic': gbar_K_T,
+    'gbar_K_T.basal': gbar_K_T,
+    'gbar_K_T.apical': gbar_K_T,
+    'gbar_K_T.axonal': gbar_K_T,
+    'gbar_K_P.somatic': gbar_K_P,
+    'gbar_K_P.basal': gbar_K_P,
+    'gbar_K_P.apical': gbar_K_P,
+    'gbar_K_P.axonal': gbar_K_P,
+    'gbar_SK.somatic': gbar_SK,
+    'gbar_SK.basal': gbar_SK,
+    'gbar_SK.apical': gbar_SK,
+    'gbar_SK.axonal': gbar_SK,
     # I-HCN current
-    'gbar_Ih.somatic': 1e-4,
-    'gbar_Ih.basal': 1e-4,
-    'gbar_Ih.apical': 1e-4,
-    'gbar_Ih.axonal': 1e-4,
+    'gbar_Ih.somatic': gbar_Ih,
+    'gbar_Ih.basal': gbar_Ih,
+    'gbar_Ih.apical': gbar_Ih,
+    'gbar_Ih.axonal': gbar_Ih,
     # I-M current
-    'gbar_Im.somatic': 1e-3,
-    'gbar_Im.basal': 1e-3,
-    'gbar_Im.apical': 1e-3,
-    'gbar_Im.axonal': 1e-3,
+    'gbar_Im.somatic': gbar_Im,
+    'gbar_Im.basal': gbar_Im,
+    'gbar_Im.apical': gbar_Im,
+    'gbar_Im.axonal': gbar_Im,
     # CaHVA current
-    'gbar_Ca_HVA.somatic': 1e-4,
-    'gbar_Ca_HVA.basal': 1e-4,
-    'gbar_Ca_HVA.apical': 1e-4,
-    'gbar_Ca_HVA.axonal': 1e-4,
+    'gbar_Ca_HVA.somatic': gbar_Ca_HVA,
+    'gbar_Ca_HVA.basal': gbar_Ca_HVA,
+    'gbar_Ca_HVA.apical': gbar_Ca_HVA,
+    'gbar_Ca_HVA.axonal': gbar_Ca_HVA,
     # CaLVA current
-    'gbar_Ca_LVA.somatic': 1e-3,
-    'gbar_Ca_LVA.basal': 1e-3,
-    'gbar_Ca_LVA.apical': 1e-3,
-    'gbar_Ca_LVA.axonal': 1e-3
+    'gbar_Ca_LVA.somatic': gbar_Ca_LVA,
+    'gbar_Ca_LVA.basal': gbar_Ca_LVA,
+    'gbar_Ca_LVA.apical': gbar_Ca_LVA,
+    'gbar_Ca_LVA.axonal': gbar_Ca_LVA
 }
 
 def plot_responses(responses, filename='./figures/optResults/responses.png'):
@@ -129,6 +138,7 @@ if plotResponses:
     release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
     plot_responses(release_responses, filename='./figures/optResults/Original_responses.png')
     plt.show()
+    quit()
 
 # opt = bpopt.optimisations.DEAPOptimisation(
 #     evaluator=evaluator,
@@ -146,4 +156,6 @@ for i in range(len(halloffame)):
     print('Best %d solution: \n' % i + str(best_params))
 
     best_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=best_params)
-    if plotResponses: plot_responses(best_responses, filename='./figures/optResults/Best_responses_%i.png' % i)
+    if plotResponses:
+        plot_responses(best_responses, filename='./figures/optResults/Best_responses_%i.png' % i)
+        plt.show()
