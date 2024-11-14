@@ -11,7 +11,7 @@
         "sectionlist": "all",
         "type": "range",
         "dist_type": "uniform",
-        "bounds": [-100, -60]
+        "bounds": [-90, -50]
     },
     {
         "param_name": "cm",
@@ -83,7 +83,7 @@
     {
         "param_name": "gbar_NaTs",
         "mech": "NaTs",
-        "bounds": [0, 20],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -92,7 +92,7 @@
     {
         "param_name": "gbar_NaTs",
         "mech": "NaTs",
-        "bounds": [0, 20],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -101,7 +101,7 @@
     {
         "param_name": "gbar_NaTs",
         "mech": "NaTs",
-        "bounds": [0, 20],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -110,7 +110,7 @@
     {
         "param_name": "gbar_NaTs",
         "mech": "NaTs",
-        "bounds": [0, 20],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -120,7 +120,7 @@
     {
         "param_name": "gbar_Nap",
         "mech": "Nap",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-8, 1e-5],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -129,7 +129,7 @@
     {
         "param_name": "gbar_Nap",
         "mech": "Nap",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-8, 1e-5],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -138,7 +138,7 @@
     {
         "param_name": "gbar_Nap",
         "mech": "Nap",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-8, 1e-5],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -147,7 +147,7 @@
     {
         "param_name": "gbar_Nap",
         "mech": "Nap",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-8, 1e-5],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -157,7 +157,7 @@
     {
         "param_name": "gbar_Kv3_1",
         "mech": "Kv3_1",
-        "bounds": [0, 0.5],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -166,7 +166,7 @@
     {
         "param_name": "gbar_Kv3_1",
         "mech": "Kv3_1",
-        "bounds": [0, 0.5],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -175,7 +175,7 @@
     {
         "param_name": "gbar_Kv3_1",
         "mech": "Kv3_1",
-        "bounds": [0, 0.5],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -184,7 +184,7 @@
     {
         "param_name": "gbar_Kv3_1",
         "mech": "Kv3_1",
-        "bounds": [0, 0.5],
+        "bounds": [1e-1, 1e1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -194,7 +194,7 @@
     {
         "param_name": "gbar_K_T",
         "mech": "K_T",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-3, 1e-1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -203,7 +203,7 @@
     {
         "param_name": "gbar_K_T",
         "mech": "K_T",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-3, 1e-1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -212,7 +212,7 @@
     {
         "param_name": "gbar_K_T",
         "mech": "K_T",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-3, 1e-1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -221,7 +221,7 @@
     {
         "param_name": "gbar_K_T",
         "mech": "K_T",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-3, 1e-1],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -231,7 +231,7 @@
     {
         "param_name": "gbar_K_P",
         "mech": "K_P",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -240,7 +240,7 @@
     {
         "param_name": "gbar_K_P",
         "mech": "K_P",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -249,7 +249,7 @@
     {
         "param_name": "gbar_K_P",
         "mech": "K_P",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -258,7 +258,7 @@
     {
         "param_name": "gbar_K_P",
         "mech": "K_P",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -268,7 +268,7 @@
     {
         "param_name": "gbar_SK",
         "mech": "SK",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -277,7 +277,7 @@
     {
         "param_name": "gbar_SK",
         "mech": "SK",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -286,7 +286,7 @@
     {
         "param_name": "gbar_SK",
         "mech": "SK",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -295,7 +295,7 @@
     {
         "param_name": "gbar_SK",
         "mech": "SK",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -305,7 +305,7 @@
     {
         "param_name": "gbar_Ih",
         "mech": "Ih",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-6, 1e-4],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -314,7 +314,7 @@
     {
         "param_name": "gbar_Ih",
         "mech": "Ih",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-6, 1e-4],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -323,7 +323,7 @@
     {
         "param_name": "gbar_Ih",
         "mech": "Ih",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-6, 1e-4],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -332,7 +332,7 @@
     {
         "param_name": "gbar_Ih",
         "mech": "Ih",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-6, 1e-4],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -342,7 +342,7 @@
     {
         "param_name": "gbar_Im",
         "mech": "Im",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -351,7 +351,7 @@
     {
         "param_name": "gbar_Im",
         "mech": "Im",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -360,7 +360,7 @@
     {
         "param_name": "gbar_Im",
         "mech": "Im",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -369,7 +369,7 @@
     {
         "param_name": "gbar_Im",
         "mech": "Im",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-5, 1e-3],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -379,7 +379,7 @@
     {
         "param_name": "gbar_Ca_HVA",
         "mech": "Ca_HVA",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -388,7 +388,7 @@
     {
         "param_name": "gbar_Ca_HVA",
         "mech": "Ca_HVA",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -397,7 +397,7 @@
     {
         "param_name": "gbar_Ca_HVA",
         "mech": "Ca_HVA",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -406,7 +406,7 @@
     {
         "param_name": "gbar_Ca_HVA",
         "mech": "Ca_HVA",
-        "bounds": [0, 1e-1],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -416,7 +416,7 @@
     {
         "param_name": "gbar_Ca_LVA",
         "mech": "Ca_LVA",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -425,7 +425,7 @@
     {
         "param_name": "gbar_Ca_LVA",
         "mech": "Ca_LVA",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -434,7 +434,7 @@
     {
         "param_name": "gbar_Ca_LVA",
         "mech": "Ca_LVA",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
@@ -443,7 +443,7 @@
     {
         "param_name": "gbar_Ca_LVA",
         "mech": "Ca_LVA",
-        "bounds": [0, 1e-2],
+        "bounds": [1e-4, 1e-2],
         "dist_type": "uniform",
         "mech_param": "gbar",
         "type": "range",
