@@ -138,7 +138,6 @@ if plotResponses:
     release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
     plot_responses(release_responses, filename='./figures/optResults/Original_responses.png')
     plt.show()
-    quit()
 
 # opt = bpopt.optimisations.DEAPOptimisation(
 #     evaluator=evaluator,
