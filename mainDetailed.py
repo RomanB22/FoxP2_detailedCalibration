@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-showResponses=True
+showResponses=False
 verbose=False
 offspringSize=100
-maxGenerations=200
+maxGenerations=50
 
 morphoFile = './morphology/detailedMorpho.swc' # detailedMorpho threeCompartmental
 # detailedMorpho characteristics
