@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=20
-maxGenerations=200
+offspringSize=100
+maxGenerations=50
 
 morphoFile = './morphology/threeCompartmental.swc'
 workDir = './config_3Comp/'
