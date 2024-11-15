@@ -33,10 +33,17 @@ config_dir = os.path.join(script_dir, 'config_3Comp')
 # TODO add functionality to read settings of every object from config format
 
 
-def define_mechanisms():
+def define_mechanisms(mechanismSelected=[]):
     """Define mechanisms"""
+    mech_definitions={}
+    mech_definitionsOrig = load_mechanisms()
 
-    mech_definitions = load_mechanisms()
+    for sec, mechs in mech_definitionsOrig.items():
+        if sec=='all':
+            mech_definitions[sec]=mech_definitionsOrig[sec]
+        else:
+            mech_definitions[sec]=[i for i in mechanismSelected]
+
     return create_mechanisms(mech_definitions)
 
 
@@ -67,10 +74,18 @@ def create_mechanisms(mech_definitions):
     return mechanisms
 
 
-def define_parameters():
+def define_parameters(mechanismSelected=[]):
     """Define parameters"""
+    param_configsOrig = load_parameters()
+    param_configs = []
 
-    param_configs = load_parameters()
+    for paramConf in param_configsOrig:
+        if 'mech' in paramConf:
+            if paramConf['mech'] in mechanismSelected:
+                param_configs.append(paramConf)
+        else:
+            param_configs.append(paramConf)
+
     return create_parameters(param_configs)
 
 

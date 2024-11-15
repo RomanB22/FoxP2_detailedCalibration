@@ -4,11 +4,22 @@ import matplotlib.pyplot as plt
 
 plotMorpho=False
 plotResponses=True
-offspringSize=50
-maxGenerations=100
+showResponses=True
+verbose=False
+offspringSize=100
+maxGenerations=200
 
-morphoFile = './morphology/threeCompartmental.swc' # detailedMorpho threeCompartmental
+morphoFile = './morphology/detailedMorpho.swc' # detailedMorpho threeCompartmental
+# detailedMorpho characteristics
+# Soma surface area: 375.49235268575677 um
+# Neuron surface area: 4139.76989788124 um
+# threeCompartmental characteristics
+# Soma surface area: 2827.4333882308138 um
+# Neuron surface area: 4948.008429403924 um
+
 workDir = './config_3Comp/'
+# mechanismOriginal = ['NaTs', 'Nap', 'Kv3_1', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
+mechanismSelected = ['NaTs', 'Nap', 'Kv3_1', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
 
 if plotMorpho:
     import neurom
@@ -16,44 +27,44 @@ if plotMorpho:
     plot_morph3d(neurom.load_morphology(morphoFile)) #
     plt.show()
 
-    # from neurom import features
-    # import numpy as np
-    # m = neurom.load_morphology(morphoFile)
-    # SomaSurf = features.get('soma_surface_area', m)
-    # NeuritesSurf = np.sum(features.get('total_area_per_neurite', m))
-    # print(features.get('total_area_per_neurite', m),features.get('total_length_per_neurite', m))
-    # print("Soma surface area: " + str(SomaSurf) + " um", '\n', "Neuron surface area: " + str(SomaSurf+NeuritesSurf) + " um")
+    from neurom import features
+    import numpy as np
+    m = neurom.load_morphology(morphoFile)
+    SomaSurf = features.get('soma_surface_area', m)
+    NeuritesSurf = np.sum(features.get('total_area_per_neurite', m))
+    print(features.get('total_area_per_neurite', m),features.get('total_length_per_neurite', m))
+    print("Soma surface area: " + str(SomaSurf) + " um", '\n', "Neuron surface area: " + str(SomaSurf+NeuritesSurf) + " um")
     quit()
 morphology = ephys.morphologies.NrnFileMorphology(morphology_path=morphoFile, do_replace_axon=True)
 
 import json
 param_configs = json.load(open(workDir+'parameters.json'))
-print([param_config['param_name'] for param_config in param_configs])
+if verbose: print([param_config['param_name'] for param_config in param_configs])
 
 import l5pc_model
-parameters = l5pc_model.define_parameters()
-print('\n'.join('%s' % param for param in parameters))
+parameters = l5pc_model.define_parameters(mechanismSelected=mechanismSelected)
+if verbose: print('\n'.join('%s' % param for param in parameters))
 
-mechanisms = l5pc_model.define_mechanisms()
-print('\n'.join('%s' % mech for mech in mechanisms))
+mechanisms = l5pc_model.define_mechanisms(mechanismSelected=mechanismSelected)
+if verbose: print('\n'.join('%s' % mech for mech in mechanisms))
 
 l5pc_cell = ephys.models.CellModel('l5pc', morph=morphology, mechs=mechanisms, params=parameters)
-print(l5pc_cell)
+if verbose: print(l5pc_cell)
 
 param_names = [param.name for param in l5pc_cell.params.values() if not param.frozen]
 
 proto_configs = json.load(open(workDir+'protocols.json'))
-print(proto_configs)
+if verbose: print(proto_configs)
 
 import l5pc_evaluator
 fitness_protocols = l5pc_evaluator.define_protocols()
-print('\n'.join('%s' % protocol for protocol in fitness_protocols.values()))
+if verbose: print('\n'.join('%s' % protocol for protocol in fitness_protocols.values()))
 
 feature_configs = json.load(open(workDir+'features.json'))
-print(feature_configs)
+if verbose: print(feature_configs)
 
 fitness_calculator = l5pc_evaluator.define_fitness_calculator(fitness_protocols)
-# print(fitness_calculator)
+if verbose: print(fitness_calculator)
 
 sim = ephys.simulators.NrnSimulator()
 
@@ -64,69 +75,6 @@ evaluator = ephys.evaluators.CellEvaluator(
         fitness_calculator=fitness_calculator,
         sim=sim)
 
-gbar_NaTs=1
-gbar_Nap=0
-gbar_Kv3_1=5e-1
-gbar_K_T=0
-gbar_K_P=0
-gbar_SK=0
-gbar_Ih=0
-gbar_Im=0
-gbar_Ca_HVA=1e-3
-gbar_Ca_LVA=0
-
-release_params = {
-    'g_pas.all': 7.5e-05,
-    'e_pas.all': -86,
-    'cm.all': 1,
-    # Sodium currents
-    'gbar_NaTs.somatic': gbar_NaTs,
-    'gbar_NaTs.basal': gbar_NaTs,
-    'gbar_NaTs.apical': gbar_NaTs,
-    'gbar_NaTs.axonal': gbar_NaTs,
-    'gbar_Nap.somatic': gbar_Nap,
-    'gbar_Nap.basal': gbar_Nap,
-    'gbar_Nap.apical': gbar_Nap,
-    'gbar_Nap.axonal': gbar_Nap,
-    # Potassium currents
-    'gbar_Kv3_1.somatic': gbar_Kv3_1,
-    'gbar_Kv3_1.basal': gbar_Kv3_1,
-    'gbar_Kv3_1.apical': gbar_Kv3_1,
-    'gbar_Kv3_1.axonal': gbar_Kv3_1,
-    'gbar_K_T.somatic': gbar_K_T,
-    'gbar_K_T.basal': gbar_K_T,
-    'gbar_K_T.apical': gbar_K_T,
-    'gbar_K_T.axonal': gbar_K_T,
-    'gbar_K_P.somatic': gbar_K_P,
-    'gbar_K_P.basal': gbar_K_P,
-    'gbar_K_P.apical': gbar_K_P,
-    'gbar_K_P.axonal': gbar_K_P,
-    'gbar_SK.somatic': gbar_SK,
-    'gbar_SK.basal': gbar_SK,
-    'gbar_SK.apical': gbar_SK,
-    'gbar_SK.axonal': gbar_SK,
-    # I-HCN current
-    'gbar_Ih.somatic': gbar_Ih,
-    'gbar_Ih.basal': gbar_Ih,
-    'gbar_Ih.apical': gbar_Ih,
-    'gbar_Ih.axonal': gbar_Ih,
-    # I-M current
-    'gbar_Im.somatic': gbar_Im,
-    'gbar_Im.basal': gbar_Im,
-    'gbar_Im.apical': gbar_Im,
-    'gbar_Im.axonal': gbar_Im,
-    # CaHVA current
-    'gbar_Ca_HVA.somatic': gbar_Ca_HVA,
-    'gbar_Ca_HVA.basal': gbar_Ca_HVA,
-    'gbar_Ca_HVA.apical': gbar_Ca_HVA,
-    'gbar_Ca_HVA.axonal': gbar_Ca_HVA,
-    # CaLVA current
-    'gbar_Ca_LVA.somatic': gbar_Ca_LVA,
-    'gbar_Ca_LVA.basal': gbar_Ca_LVA,
-    'gbar_Ca_LVA.apical': gbar_Ca_LVA,
-    'gbar_Ca_LVA.axonal': gbar_Ca_LVA
-}
-
 def plot_responses(responses, filename='./figures/optResults/responses.png'):
     fig, axes = plt.subplots(len(responses), figsize=(10,8))
     for index, (resp_name, response) in enumerate(responses.items()):
@@ -134,14 +82,6 @@ def plot_responses(responses, filename='./figures/optResults/responses.png'):
         axes[index].set_title(resp_name)
     fig.tight_layout()
     fig.savefig(filename)
-if plotResponses: 
-    release_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=release_params)
-    plot_responses(release_responses, filename='./figures/optResults/Original_responses.png')
-    plt.show()
-
-# opt = bpopt.optimisations.DEAPOptimisation(
-#     evaluator=evaluator,
-#     offspring_size=offspringSize)
 
 opt = bpopt.deapext.optimisationsCMA.DEAPOptimisationCMA(
     evaluator=evaluator,
@@ -157,4 +97,4 @@ for i in range(len(halloffame)):
     best_responses = evaluator.run_protocols(protocols=fitness_protocols.values(), param_values=best_params)
     if plotResponses:
         plot_responses(best_responses, filename='./figures/optResults/Best_responses_%i.png' % i)
-        plt.show()
+        if showResponses: plt.show()
