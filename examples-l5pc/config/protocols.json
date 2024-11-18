@@ -1,0 +1,80 @@
+{
+    "bAP": {
+        "stimuli": [
+            {
+                "delay": 295,
+                "amp": 1.9,
+                "duration": 5,
+                "totduration": 600
+            }
+        ],
+        "extra_recordings": [
+            {
+                "var": "v",
+                "somadistance": 660,
+                "type": "somadistance",
+                "name": "dend1",
+                "seclist_name": "apical",
+                "arbor_branch_index": 251,
+                "arbor_branch_index_with_replaced_axon": 123
+            },
+            {
+                "var": "v",
+                "somadistance": 800,
+                "type": "somadistance",
+                "name": "dend2",
+                "seclist_name": "apical",
+                "arbor_branch_index": 251,
+                "arbor_branch_index_with_replaced_axon": 123
+            }
+        ]
+    },
+    "Step3": {
+        "stimuli": [
+            {
+                "delay": 700,
+                "amp": 0.95,
+                "duration": 2000,
+                "totduration": 3000
+            },
+            {
+                "delay": 0,
+                "amp": -0.126,
+                "duration": 3000,
+                "totduration": 3000
+            }
+        ]
+    },
+    "Step2": {
+        "stimuli": [
+            {
+                "delay": 700,
+                "amp": 0.562,
+                "duration": 2000,
+                "totduration": 3000
+            },
+            {
+                "delay": 0,
+                "amp": -0.126,
+                "duration": 3000,
+                "totduration": 3000
+            }
+        ]
+    },
+    "Step1": {
+        "stimuli": [
+            {
+                "delay": 700,
+                "amp": 0.458,
+                "duration": 2000,
+                "totduration": 3000
+            },
+            {
+                "delay": 0,
+                "amp": -0.126,
+                "duration": 3000,
+                "totduration": 3000
+            }
+        ]
+    }
+}
