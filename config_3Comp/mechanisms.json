@@ -2,42 +2,6 @@
     "all": [
         "pas"
     ],
-    "apical": [
-        "Nav",
-        "Nap",
-        "Kv3_1",
-        "K_T",
-        "K_P",
-        "SK",
-        "Ih",
-        "Im",
-        "Ca_HVA",
-        "Ca_LVA"
-    ],
-    "basal": [
-        "Nav",
-        "Nap",
-        "Kv3_1",
-        "K_T",
-        "K_P",
-        "SK",
-        "Ih",
-        "Im",
-        "Ca_HVA",
-        "Ca_LVA"
-    ],
-    "axonal": [
-        "Nav",
-        "Nap",
-        "Kv3_1",
-        "K_T",
-        "K_P",
-        "SK",
-        "Ih",
-        "Im",
-        "Ca_HVA",
-        "Ca_LVA"
-    ],
     "somatic": [
         "Nav",
         "Nap",
@@ -48,6 +12,7 @@
         "Ih",
         "Im",
         "Ca_HVA",
-        "Ca_LVA"
+        "Ca_LVA",
+        "CaDynamics"
     ]
 }

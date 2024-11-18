@@ -53,7 +53,7 @@ def load_mechanisms():
         open(
             os.path.join(
                 config_dir,
-                'mechanisms.json')))
+                'mechanismsFull.json')))
 
 
 def create_mechanisms(mech_definitions):
@@ -90,7 +90,7 @@ def define_parameters(mechanismSelected=[]):
 
 
 def load_parameters():
-    return json.load(open(os.path.join(config_dir, 'parameters.json')))
+    return json.load(open(os.path.join(config_dir, 'parametersFull.json')))
 
 
 def create_parameters(param_configs):

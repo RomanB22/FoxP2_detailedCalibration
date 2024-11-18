@@ -85,16 +85,18 @@ for cell in cells:
     print("\nCell " + cell.name, ": ")
     [pprint(i.efeatures) for i in cell.recordings]
 
-step=10
+step=1
 for cellId in range(6):
     for i in range(0, len(cells[cellId].recordings), step):
-        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage)
-    plt.show()
+        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage, label=str(i))
+    plt.legend()
+    # plt.show()
 
 for cellId in range(6):
     for i in range(0, len(cells[cellId].recordings), step):
-        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current)
-    plt.show()
+        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current, label=str(i))
+    plt.legend()
+    # plt.show()
 
 for cell in cells:
     cell.plot_all_recordings(show=False, output_dir='figures/PlotSteps')
