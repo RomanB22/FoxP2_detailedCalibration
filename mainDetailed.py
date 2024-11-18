@@ -6,19 +6,20 @@ plotMorpho=False
 plotResponses=True
 showResponses=True
 verbose=False
-offspringSize=50
+offspringSize=5
 maxGenerations=20
 
 morphoFile = './morphology/threeCompartmental.swc' # threeCompartmental
 # threeCompartmental characteristics
-# Soma surface area: 1256.6370614359173 um**2
-# Neuron surface area: 4932.3004661359755 um**2
+# Soma surface area: 1005.3096491487338 um^2
+# Neuron surface area: 4775.220833456486 um^2
+
 
 
 workDir = './config_3Comp/'
 # mechanismOriginal = ['NaTs', 'Nap', 'Kv3_1', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
 # mechanismSelected = ['Nafx', 'Nap', 'kdrin', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
-mechanismSelected = ['NaV', 'Kv3_1']
+mechanismSelected = ['NaV', 'Kv3_1', 'K_T', 'Ih', 'SK']
 
 if plotMorpho:
     import neurom
