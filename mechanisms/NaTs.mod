@@ -1,9 +1,9 @@
-: Reference:		Reuveni, Friedman, Amitai, and Gutnick, J.Neurosci. 1993
+: Reference: Colbert and Pan 2002
 
 NEURON	{
-	SUFFIX Ca_HVA
-	USEION ca READ eca WRITE ica
-	RANGE gbar, g, ica 
+	SUFFIX NaTs
+	USEION na READ ena WRITE ina
+	RANGE gbar, g, ina
 }
 
 UNITS	{
@@ -13,14 +13,25 @@ UNITS	{
 }
 
 PARAMETER	{
-	gbar = 0.00001 (S/cm2) 
+	gbar = 0.00001 (S/cm2)
+
+	malphaF = 0.182
+	mbetaF = 0.124
+	mvhalf = -40 (mV)
+	mk = 6 (mV)
+
+	halphaF = 0.015
+	hbetaF = 0.015
+	hvhalf = -66 (mV)
+	hk = 6 (mV)
 }
 
 ASSIGNED	{
 	v	(mV)
-	eca	(mV)
-	ica	(mA/cm2)
+	ena	(mV)
+	ina	(mA/cm2)
 	g	(S/cm2)
+	celsius (degC)
 	mInf
 	mTau
 	mAlpha
@@ -31,15 +42,15 @@ ASSIGNED	{
 	hBeta
 }
 
-STATE	{ 
+STATE	{
 	m
 	h
 }
 
 BREAKPOINT	{
 	SOLVE states METHOD cnexp
-	g = gbar*m*m*h
-	ica = g*(v-eca)
+	g = gbar*m*m*m*h
+	ina = g*(v-ena)
 }
 
 DERIVATIVE states	{
@@ -55,19 +66,21 @@ INITIAL{
 }
 
 PROCEDURE rates(){
+  LOCAL qt
+  qt = 2.3^((celsius-23)/10)
+
 	UNITSOFF
-    :   if((v == -27) ){        
-    :       v = v+0.0001
-    :   }
-		:mAlpha =  (0.055*(-27-v))/(exp((-27-v)/3.8) - 1)
-		mAlpha = 0.055 * vtrap(-27 - v, 3.8)        
-		mBeta  =  (0.94*exp((-75-v)/17))
+		mAlpha = malphaF * vtrap(-(v - mvhalf), mk)
+		mBeta = mbetaF * vtrap((v - mvhalf), mk)
+
 		mInf = mAlpha/(mAlpha + mBeta)
-		mTau = 1/(mAlpha + mBeta)
-		hAlpha =  (0.000457*exp((-13-v)/50))
-		hBeta  =  (0.0065/(exp((-v-15)/28)+1))
+		mTau = (1/(mAlpha + mBeta))/qt
+
+		hAlpha = halphaF * vtrap(v - hvhalf, hk)
+		hBeta = hbetaF * vtrap(-(v - hvhalf), hk)
+
 		hInf = hAlpha/(hAlpha + hBeta)
-		hTau = 1/(hAlpha + hBeta)
+		hTau = (1/(hAlpha + hBeta))/qt
 	UNITSON
 }
 

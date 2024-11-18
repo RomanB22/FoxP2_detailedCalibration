@@ -2,10 +2,10 @@
 : Reference : Kohler et al. 1996
 
 NEURON {
-       SUFFIX SK_E2
+       SUFFIX SK
        USEION k READ ek WRITE ik
        USEION ca READ cai
-       RANGE gSK_E2bar, gSK_E2, ik
+       RANGE gbar, g, ik
 }
 
 UNITS {
@@ -16,7 +16,7 @@ UNITS {
 
 PARAMETER {
           v            (mV)
-          gSK_E2bar = .000001 (mho/cm2)
+          gbar = .000001 (mho/cm2)
           zTau = 1              (ms)
           ek           (mV)
           cai          (mM)
@@ -25,7 +25,7 @@ PARAMETER {
 ASSIGNED {
          zInf
          ik            (mA/cm2)
-         gSK_E2	       (S/cm2)
+         g	       (S/cm2)
 }
 
 STATE {
@@ -34,8 +34,8 @@ STATE {
 
 BREAKPOINT {
            SOLVE states METHOD cnexp
-           gSK_E2  = gSK_E2bar * z
-           ik   =  gSK_E2 * (v - ek)
+           g  = gbar * z
+           ik   =  g * (v - ek)
 }
 
 DERIVATIVE states {

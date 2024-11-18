@@ -111,7 +111,7 @@ def create_protocols(protocol_definitions, do_replace_axon=None, sim='nrn'):
         for stimulus_definition in protocol_definition:
             stimuli.append(ephys.stimuli.NrnSquarePulse(
                 step_amplitude=protocol_definition[stimulus_definition]['amp'],
-                step_delay=protocol_definition[stimulus_definition]['delay'],
+                step_delay=0 if stimulus_definition=='holding' else 300, #protocol_definition[stimulus_definition]['delay']
                 step_duration=protocol_definition[stimulus_definition]['duration'],
                 location=soma_loc,
                 total_duration=protocol_definition[stimulus_definition]['totduration']))
@@ -149,7 +149,7 @@ def define_fitness_calculator(protocols):
                 feature_name = '%s.%s.%s' % (
                     protocol_name, location, efel_feature_name)
                 recording_names = {'': '%s.%s.v' % (protocol_name, location)}
-                stimulus = protocols[protocol_name].stimuli[0]
+                stimulus = protocols[protocol_name].stimuli[1]
 
                 stim_start = stimulus.step_delay
 

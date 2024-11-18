@@ -20,7 +20,8 @@ for cell in files_metadata.keys():
             "filepath": file,
             "i_unit": "pA",
             "t_unit": "s",
-            "v_unit": "mV"
+            "v_unit": "mV",
+            "ljp": 14.
         })
 
 print(files_metadata)
@@ -30,27 +31,25 @@ cells = bluepyefe.extract.read_recordings(files_metadata=files_metadata)
 pprint(vars(cells[0].recordings[0]))
 
 interesting_efeatures = [
-    'Spikecount',
-    'mean_frequency',
-    'ISI_CV',
-    'AP1_amp',
-    'AP_width',
-    'AP_height',
-    'AP_duration_half_width',
-    'min_AHP_values',
-    'AHP_depth',
-    'min_voltage_between_spikes',
+    'peak_time',
+    'time_to_first_spike',
+    'ISI_values',
+    'irregularity_index',
     'adaptation_index',
-    'steady_state_voltage_stimend',
-    'steady_state_hyper',
-    'steady_state_voltage',
+    'spike_count_stimint',
+    'AP_height',
+    'min_AHP_values',
+    'depolarized_base',
+    'AP_duration_half_width',
+    'AP_duration',
+    'AP_rise_time',
+    'AP_fall_time',
     'voltage_base',
     'decay_time_constant_after_stim',
-    'ohmic_input_resistance',
-    'depol_block_bool'
+    'minimum_voltage'
 ]
 
-interesting_amplitudes = [0, 50, 100, 150, 200, 250]
+interesting_amplitudes = [0, 50, 100, 150, 200, 250, 300, 350, 400]
 
 targets = []
 for efeature in interesting_efeatures:
@@ -86,19 +85,25 @@ for cell in cells:
     print("\nCell " + cell.name, ": ")
     [pprint(i.efeatures) for i in cell.recordings]
 
-for i in range(len(cells[0].recordings)):
-    plt.plot(cells[0].recordings[i].t, cells[0].recordings[i].voltage)
+step=10
+cellId=1
+for i in range(0, len(cells[cellId].recordings), step):
+    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage)
 plt.show()
 
-for i in range(len(cells[0].recordings)):
-    plt.plot(cells[0].recordings[i].t, cells[0].recordings[i].current)
+for i in range(0, len(cells[cellId].recordings), step):
+    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current)
 plt.show()
 
 for cell in cells:
-    cell.plot_all_recordings(show=False, output_dir='Figures/PlotSteps')
+    cell.plot_all_recordings(show=False, output_dir='figures/PlotSteps')
+
+Rheobase = {"219.2-E2000": 0.06, "219.2-F1000": 0.07, "219.2-F3001": 0.04,
+            "219.2-G1000": 0.06, "219.2-H1000": 0.21, "464.2-B2000": 0.06,
+            "464.2-C1000": 0.07}
 
 for cell in cells:
-    cell.rheobase = 0.07
+    cell.rheobase = Rheobase[cell.name]
     cell.compute_relative_amp()
 
 protocols = bluepyefe.extract.group_efeatures(cells, targets)
@@ -106,7 +111,7 @@ protocols = bluepyefe.extract.group_efeatures(cells, targets)
 efeatures, protocol_definitions, currents = bluepyefe.extract.create_feature_protocol_files(
     cells=cells,
     protocols=protocols,
-    output_directory='./Figures/extractionFeatures'
+    output_directory='./figures/extractionFeatures'
 )
 
 pprint(efeatures)

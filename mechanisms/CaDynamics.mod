@@ -2,7 +2,7 @@
 : modified from Destexhe et al. 1994
 
 NEURON	{
-	SUFFIX CaDynamics_E2
+	SUFFIX CaDynamics
 	USEION ca READ ica WRITE cai
 	RANGE decay, gamma, minCai, depth
 }
@@ -25,9 +25,13 @@ PARAMETER	{
 
 ASSIGNED	{ica (mA/cm2)}
 
+INITIAL {
+	cai = minCai
+}
+
 STATE	{
 	cai (mM)
-	}
+}
 
 BREAKPOINT	{ SOLVE states METHOD cnexp }
 

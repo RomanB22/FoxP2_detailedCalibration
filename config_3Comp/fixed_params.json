@@ -2,7 +2,7 @@
     "global": [
         [
             "v_init",
-            -65
+            -86
         ],
         [
             "celsius",
@@ -10,21 +10,6 @@
         ]
     ],
     "all": [
-        [
-            "g_pas",
-            3e-05,
-            "uniform"
-        ],
-        [
-            "e_pas",
-            -75,
-            "uniform"
-        ],
-        [
-            "cm",
-            1,
-            "uniform"
-        ],
         [
             "Ra",
             100,
@@ -40,11 +25,6 @@
         [
             "ek",
             -85,
-            "uniform"
-        ],
-        [
-            "cm",
-            2,
             "uniform"
         ]
     ],
@@ -62,8 +42,13 @@
     ],
     "basal": [
         [
-            "cm",
-            2,
+            "ena",
+            50,
+            "uniform"
+        ],
+        [
+            "ek",
+            -85,
             "uniform"
         ]
     ],
