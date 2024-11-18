@@ -6,20 +6,19 @@ plotMorpho=False
 plotResponses=True
 showResponses=True
 verbose=False
-offspringSize=100
-maxGenerations=200
+offspringSize=50
+maxGenerations=20
 
-morphoFile = './morphology/detailedMorpho.swc' # detailedMorpho threeCompartmental
-# detailedMorpho characteristics
-# Soma surface area: 375.49235268575677 um
-# Neuron surface area: 4139.76989788124 um
+morphoFile = './morphology/threeCompartmental.swc' # threeCompartmental
 # threeCompartmental characteristics
-# Soma surface area: 2827.4333882308138 um
-# Neuron surface area: 4948.008429403924 um
+# Soma surface area: 1256.6370614359173 um**2
+# Neuron surface area: 4932.3004661359755 um**2
+
 
 workDir = './config_3Comp/'
 # mechanismOriginal = ['NaTs', 'Nap', 'Kv3_1', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
-mechanismSelected = ['NaTs', 'Nap', 'Kv3_1', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
+# mechanismSelected = ['Nafx', 'Nap', 'kdrin', 'K_T', 'K_P', 'Ih', 'Im', 'Ca_HVA', 'Ca_LVA', 'SK']
+mechanismSelected = ['NaV', 'Kv3_1']
 
 if plotMorpho:
     import neurom
@@ -33,7 +32,7 @@ if plotMorpho:
     SomaSurf = features.get('soma_surface_area', m)
     NeuritesSurf = np.sum(features.get('total_area_per_neurite', m))
     print(features.get('total_area_per_neurite', m),features.get('total_length_per_neurite', m))
-    print("Soma surface area: " + str(SomaSurf) + " um", '\n', "Neuron surface area: " + str(SomaSurf+NeuritesSurf) + " um")
+    print("Soma surface area: " + str(SomaSurf) + " um^2", '\n', "Neuron surface area: " + str(SomaSurf+NeuritesSurf) + " um^2")
     quit()
 morphology = ephys.morphologies.NrnFileMorphology(morphology_path=morphoFile, do_replace_axon=True)
 

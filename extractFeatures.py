@@ -9,7 +9,7 @@ import bluepyefe.extract
 from bluepyefe.cell import Cell
 
 files_metadata = {"219.2-E2000": {"IDRest": []}, "219.2-F1000": {"IDRest": []}, "219.2-F3001": {"IDRest": []},
-            "219.2-G1000": {"IDRest": []}, "219.2-H1000": {"IDRest": []}, "464.2-B2000": {"IDRest": []},
+            "219.2-G1000": {"IDRest": []}, "464.2-B2000": {"IDRest": []},
             "464.2-C1000": {"IDRest": []}}
 
 # files_metadata = {"219.2-E2000": {"IDRest": []}}
@@ -21,7 +21,7 @@ for cell in files_metadata.keys():
             "i_unit": "pA",
             "t_unit": "s",
             "v_unit": "mV",
-            "ljp": 14.
+            "ljp": 0.
         })
 
 print(files_metadata)
@@ -49,7 +49,7 @@ interesting_efeatures = [
     'minimum_voltage'
 ]
 
-interesting_amplitudes = [0, 50, 100, 150, 200, 250, 300, 350, 400]
+interesting_amplitudes = [0, 100, 200, 300]
 
 targets = []
 for efeature in interesting_efeatures:
@@ -86,20 +86,21 @@ for cell in cells:
     [pprint(i.efeatures) for i in cell.recordings]
 
 step=10
-cellId=1
-for i in range(0, len(cells[cellId].recordings), step):
-    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage)
-plt.show()
+for cellId in range(6):
+    for i in range(0, len(cells[cellId].recordings), step):
+        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].voltage)
+    plt.show()
 
-for i in range(0, len(cells[cellId].recordings), step):
-    plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current)
-plt.show()
+for cellId in range(6):
+    for i in range(0, len(cells[cellId].recordings), step):
+        plt.plot(cells[cellId].recordings[i].t, cells[cellId].recordings[i].current)
+    plt.show()
 
 for cell in cells:
     cell.plot_all_recordings(show=False, output_dir='figures/PlotSteps')
 
 Rheobase = {"219.2-E2000": 0.06, "219.2-F1000": 0.07, "219.2-F3001": 0.04,
-            "219.2-G1000": 0.06, "219.2-H1000": 0.21, "464.2-B2000": 0.06,
+            "219.2-G1000": 0.06, "464.2-B2000": 0.06,
             "464.2-C1000": 0.07}
 
 for cell in cells:

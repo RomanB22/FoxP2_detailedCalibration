@@ -110,7 +110,7 @@ def create_protocols(protocol_definitions, do_replace_axon=None, sim='nrn'):
         stimuli = []
         for stimulus_definition in protocol_definition:
             stimuli.append(ephys.stimuli.NrnSquarePulse(
-                step_amplitude=protocol_definition[stimulus_definition]['amp'],
+                step_amplitude=protocol_definition[stimulus_definition]['amp'] if stimulus_definition=='holding' else protocol_definition[stimulus_definition]['amp']-protocol_definition['holding']['amp'],
                 step_delay=0 if stimulus_definition=='holding' else 300, #protocol_definition[stimulus_definition]['delay']
                 step_duration=protocol_definition[stimulus_definition]['duration'],
                 location=soma_loc,

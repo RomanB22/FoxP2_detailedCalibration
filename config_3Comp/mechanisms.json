@@ -3,7 +3,7 @@
         "pas"
     ],
     "apical": [
-        "NaTs",
+        "Nav",
         "Nap",
         "Kv3_1",
         "K_T",
@@ -15,7 +15,7 @@
         "Ca_LVA"
     ],
     "basal": [
-        "NaTs",
+        "Nav",
         "Nap",
         "Kv3_1",
         "K_T",
@@ -27,7 +27,7 @@
         "Ca_LVA"
     ],
     "axonal": [
-        "NaTs",
+        "Nav",
         "Nap",
         "Kv3_1",
         "K_T",
@@ -39,7 +39,7 @@
         "Ca_LVA"
     ],
     "somatic": [
-        "NaTs",
+        "Nav",
         "Nap",
         "Kv3_1",
         "K_T",

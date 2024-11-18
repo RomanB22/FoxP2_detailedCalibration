@@ -2,136 +2,61 @@
   "IDRest_0": {
     "holding": {
       "delay": 0.0,
-      "amp": -0.12416839692741632,
-      "duration": 1238.6929547718191,
-      "totduration": 1238.6929547718191
+      "amp": -0.008,
+      "duration": 1000,
+      "totduration": 1000
     },
     "step": {
-      "delay": 18.509324037296146,
-      "amp": 0.006426986924619699,
-      "thresh_perc": 7.89279096005928,
-      "duration": 783.190632762531,
-      "totduration": 1238.6929547718191
-    }
-  },
-  "IDRest_50": {
-    "holding": {
-      "delay": 0.0,
-      "amp": -0.1333618170835755,
-      "duration": 1238.6929547718187,
-      "totduration": 1238.6929547718187
-    },
-    "step": {
-      "delay": 31.35612542450169,
-      "amp": 0.040854629796129645,
-      "thresh_perc": 50.172352381211844,
-      "duration": 432.0410008912765,
-      "totduration": 1238.6929547718187
+      "delay": 300,
+      "amp": 0,
+      "thresh_perc": 0,
+      "duration": 435,
+      "totduration": 1000
     }
   },
   "IDRest_100": {
     "holding": {
       "delay": 0.0,
-      "amp": -0.13339843839406967,
-      "duration": 1238.6929547718191,
-      "totduration": 1238.6929547718191
+      "amp": -0.008,
+      "duration": 1000,
+      "totduration": 1000
     },
     "step": {
-      "delay": 31.35612542450169,
-      "amp": 0.0818181262393387,
-      "thresh_perc": 100.47840064480191,
-      "duration": 432.05212820851295,
-      "totduration": 1238.6929547718191
-    }
-  },
-  "IDRest_150": {
-    "holding": {
-      "delay": 0.0,
-      "amp": -0.1333340738307346,
-      "duration": 1238.6929547718187,
-      "totduration": 1238.6929547718187
-    },
-    "step": {
-      "delay": 31.35612542450169,
-      "amp": 0.1226983582514558,
-      "thresh_perc": 150.68219434389306,
-      "duration": 432.05791004982217,
-      "totduration": 1238.6929547718187
+      "delay": 300,
+      "amp": 0.07,
+      "thresh_perc": 100,
+      "duration": 432,
+      "totduration": 1000
     }
   },
   "IDRest_200": {
     "holding": {
       "delay": 0.0,
-      "amp": -0.12863159272819757,
-      "duration": 1238.6929547718191,
-      "totduration": 1238.6929547718191
+      "amp": -0.008,
+      "duration": 1000,
+      "totduration": 1000
     },
     "step": {
-      "delay": 31.356125424501695,
-      "amp": 0.1628983434682497,
-      "thresh_perc": 200.0505972417101,
-      "duration": 432.06372825491303,
-      "totduration": 1238.6929547718191
-    }
-  },
-  "IDRest_250": {
-    "holding": {
-      "delay": 0.0,
-      "amp": -0.13114597583594528,
-      "duration": 1238.6929547718187,
-      "totduration": 1238.6929547718187
-    },
-    "step": {
-      "delay": 31.35612542450169,
-      "amp": 0.20381138995686462,
-      "thresh_perc": 250.29468942071094,
-      "duration": 432.06955436517416,
-      "totduration": 1238.6929547718187
+      "delay": 300,
+      "amp": 0.14,
+      "thresh_perc": 200,
+      "duration": 432,
+      "totduration": 1000
     }
   },
   "IDRest_300": {
     "holding": {
       "delay": 0.0,
-      "amp": -0.08907742094662455,
-      "duration": 1238.692954771819,
-      "totduration": 1238.692954771819
+      "amp": -0.008,
+      "duration": 1000,
+      "totduration": 1000
     },
     "step": {
-      "delay": 31.356125424501695,
-      "amp": 0.24377680293658158,
-      "thresh_perc": 299.3750211501879,
-      "duration": 432.0663949322464,
-      "totduration": 1238.692954771819
-    }
-  },
-  "IDRest_350": {
-    "holding": {
-      "delay": 0.0,
-      "amp": -0.06901041815678279,
-      "duration": 1238.6929547718194,
-      "totduration": 1238.6929547718194
-    },
-    "step": {
-      "delay": 31.356125424501684,
-      "amp": 0.2849785414277291,
-      "thresh_perc": 349.9736473673866,
-      "duration": 432.0665282661129,
-      "totduration": 1238.6929547718194
-    }
-  },
-  "IDRest_400": {
-    "holding": {
-      "delay": 0.0,
-      "amp": -0.06938934465870261,
-      "duration": 1238.6929547718191,
-      "totduration": 1238.6929547718191
-    },
-    "step": {
-      "delay": 31.356125424501695,
-      "amp": 0.3269738596008749,
-      "thresh_perc": 401.5468451238814,
-      "duration": 432.07147828591314,
-      "totduration": 1238.6929547718191
+      "delay": 300,
+      "amp": 0.21,
+      "thresh_perc": 300,
+      "duration": 432,
+      "totduration": 1000
     }
   }
 }
