@@ -1,0 +1,55 @@
+{
+    "global": [
+        [
+            "v_init",
+            -70
+        ],
+        [
+            "celsius",
+            34
+        ]
+    ],
+    "all": [
+        [
+            "Ra",
+            100,
+            "uniform"
+        ]
+    ],
+    "apical": [
+        [
+            "ena",
+            50,
+            "uniform"
+        ],
+        [
+            "ek",
+            -85,
+            "uniform"
+        ]
+    ],
+    "somatic": [
+        [
+            "ena",
+            50,
+            "uniform"
+        ],
+        [
+            "ek",
+            -85,
+            "uniform"
+        ]
+    ],
+    "axonal": [
+        [
+            "ena",
+            50,
+            "uniform"
+        ],
+        [
+            "ek",
+            -85,
+            "uniform"
+        ]
+    ]
+}

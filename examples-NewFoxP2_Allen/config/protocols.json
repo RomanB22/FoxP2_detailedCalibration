@@ -1,0 +1,62 @@
+{
+  "IDRest_0": {
+    "holding": {
+      "delay": 0.0,
+      "amp": -0.07,
+      "duration": 1000,
+      "totduration": 1000
+    },
+    "step": {
+      "delay": 300,
+      "amp": 0.004,
+      "thresh_perc": 7.147191342337308,
+      "duration": 432,
+      "totduration": 1000
+    }
+  },
+  "IDRest_100": {
+    "holding": {
+      "delay": 0.0,
+      "amp": -0.07,
+      "duration": 1000,
+      "totduration": 1000
+    },
+    "step": {
+      "delay": 300,
+      "amp": 0.06,
+      "thresh_perc": 100.55814670132739,
+      "duration": 432,
+      "totduration": 1000
+    }
+  },
+  "IDRest_200": {
+    "holding": {
+      "delay": 0.0,
+      "amp": -0.07,
+      "duration": 1000,
+      "totduration": 1000
+    },
+    "step": {
+      "delay": 300,
+      "amp": 0.12,
+      "thresh_perc": 200.8937673998021,
+      "duration": 432,
+      "totduration": 1000
+    }
+  },
+  "IDRest_300": {
+    "holding": {
+      "delay": 0.0,
+      "amp": -0.07,
+      "duration": 1000,
+      "totduration": 1000
+    },
+    "step": {
+      "delay": 300,
+      "amp": 0.18074853199401072,
+      "thresh_perc": 301.2475533233512,
+      "duration": 432,
+      "totduration": 1000
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "all": [
+        "pas"
+    ],
+    "apical": [
+        "NaV",
+        "Kv3_1"
+    ],
+    "axonal": [
+        "NaV",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
+        "Ih",
+        "Im",
+        "Ca_HVA",
+        "Ca_LVA",
+        "CaDynamics"
+    ],
+    "somatic": [
+        "NaV",
+        "Nap",
+        "Kv3_1",
+        "K_T",
+        "K_P",
+        "SK",
+        "Ih",
+        "Im",
+        "Ca_HVA",
+        "Ca_LVA",
+        "CaDynamics"
+    ]
+}
